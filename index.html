@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+   <!-- Responsive viewport tag, tells small screens that it's responsive -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="find my next meal idea!">
+  <title>Find my next meal!</title>
+  <!-- jquery cdn mindfied -->
+     <script
+          src="https://code.jquery.com/jquery-3.2.1.min.js"
+          integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+          crossorigin="anonymous"></script>
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="float-grid.css" />
+  <link rel="stylesheet" href="index.css" />
+</head>
+<body>
+	<main role="main">
+		<!-- search form -->
+		<h1>find Your next Meal idea!</h1>
+		
+		<form action="#" class="js-search-form">
+			<label for="query"></label>
+			<input type="text" class="js-query-search" required>
+			<button type="submit">Search</button>
+		</form>
+		<!-- display the results of the search form -->
+		<h2>Results</h2>
+		<div class="food-results"></div>
+		<div class="youtube-results"></div>
+		<div class="maps-reuslts"></div>
+		<div id="disqus_thread"></div>
+	</main>
+<!-- js files -->
+<script src="index.js"></script>
+</body>
+</html>
