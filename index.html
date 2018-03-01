@@ -17,22 +17,27 @@
 </head>
 <body>
 	<main role="main">
+		<div class="js-start-page">
 		<!-- search form -->
 		<h1>find Your next Meal idea!</h1>
 		
 			<form action="#" class="js-search-form">
 				<label for="query"></label>
 					<input type="text" class="js-query-search" required>
+						<br>
 						<button class="js-submit" type="submit">Search</button>
 		</form>
+		</div>
 		<!-- display the results of the search form -->
-		<h2>Results</h2>
+		<h2 class="hidden">Results</h2>
 			<div class="js-food-results"></div>
 				<div class="js-youtube-results hidden"></div>
 					<div class="js-maps-results hidden"></div>
 						<div class="js-error hidden"><div>
+							<button class="js-restart hidden">Search Again!</button>
 	</main>
 <!-- js files -->
-	<script src="index.js"></script>
+	<!-- <script src="index.js"></script> -->
+	<script src="walmart.js"></script>
 </body>
 </html>

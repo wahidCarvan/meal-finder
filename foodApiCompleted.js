@@ -6,10 +6,6 @@ const EDAMAM_SEARCH_URL = 'https://api.edamam.com/search'
 const EDAMAM_API_KEY =
 '8a8331400d84d570a5aa12258b227c04'	
 const EDAMAM_APPLICATION_ID = '8b5edbbf'
-// walmart api
-//google api
-// making the request they need to be chained togethers
-
 
 // getDataFromFoodApi takes 2 arguments search term and the callback 
 //a callback is a function is executed after another one is called.
@@ -76,8 +72,8 @@ function watchSubmit(){
 // watches the submit button
 $('.js-search-form').on('submit', function(event){
 	event.preventDefault();
-	getDataFromFoodApi($('.js-query-search')
-		.val(), renderResult);
+	getDataFromFoodApi($('.js-query-search').val(), renderResult);
+	$('.js-query-search').val("");
 	});
 }
 $(watchSubmit);
