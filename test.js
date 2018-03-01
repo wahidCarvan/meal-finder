@@ -18,8 +18,7 @@ function getDataFromFoodApi(searchTerm, callback) {
   	q:`${searchTerm}`,
   	app_id: `${EDAMAM_APPLICATION_ID}`,
     app_key: `${EDAMAM_API_KEY}`,
-    // from: 5,
-    // to: 10
+   
   }
   //$ sign is jquery unless its a template literal. template literal is `${edamam_application_id}`
   console.log(query);
@@ -41,12 +40,33 @@ function renderResult(result) {
 		// the url or uri needs to go we only want a link for the recipe
 		let listItem =
 		 	`<div class ="js-food-item"> 
-		 		<img src="${result.hits[i].recipe.image}"/>
-				<a href="${result.hits[i].recipe.source}"<a/>
-				<p>${result.hits[i].recipe.url}</p>
-				<p>${result.hits[i].recipe.label}</p>
-				<p>${result.hits[i].recipe.uri}</p>
+		 	<h2>
+		 	<!--IMAGE -->
+		 	 <a class="js-result-source" href="$"{result.html_url}" target="_blank">
+			<img src="${result.hits[i].recipe.image}"/></a>
+			<!--LABEL-->
+		 		<a class="js-result-source" href="$"{result.html_url}" target="_blank"><p>${result.hits[i].recipe.label}</p></a>
+		 		<!--SOURCE-->
+		 	<a class="js-result-source" href="$"{result.html_url}" target="_blank">
+		 	<p>${result.hits[i].recipe.source}</p>
+				<h2>
 			</div>`
+
+
+
+   // <a class="js-result-name" href="${result.html_url}" target="_blank">${result.name}</a> 
+
+
+// ${result.hits[i].recipe.image}
+
+
+
+
+
+
+
+
+
 	// grab the listItems and push in to the listItem
 		// console.log(listItems);
 		listItems.push(listItem)
@@ -54,14 +74,14 @@ function renderResult(result) {
 
 // push the listItem to listItems array
 	// result.hits[i].uri
-	// // we make a object to store the data
-	// let recipe = {
-	// uri: "",
-	// label: "",
-	// image:"",
-	// source:"",
-	// url:"",
-	// }
+	// we make a object to store the data
+	let recipe = {
+	uri: "",
+	label: "",
+	image:"",
+	source:"",
+	url:"",
+	}
 		}
 
 $('.js-food-results').html
