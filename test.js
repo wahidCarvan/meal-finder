@@ -18,8 +18,10 @@ function getDataFromFoodApi(searchTerm, callback) {
   	q:`${searchTerm}`,
   	app_id: `${EDAMAM_APPLICATION_ID}`,
     app_key: `${EDAMAM_API_KEY}`,
-   
+    ingr: 10,
   }
+
+
   //$ sign is jquery unless its a template literal. template literal is `${edamam_application_id}`
   console.log(query);
   $.getJSON(EDAMAM_SEARCH_URL, query, callback);
@@ -42,24 +44,49 @@ function renderResult(result) {
 		 	`<div class ="js-food-item"> 
 		 	<h2>
 		 	<!--IMAGE -->
-		 	 <a class="js-result-source" href="$"{result.html_url}" target="_blank">
+		 	 <a class="js-result-source">
 			<img src="${result.hits[i].recipe.image}"/></a>
 			<!--LABEL-->
-		 		<a class="js-result-source" href="$"{result.html_url}" target="_blank"><p>${result.hits[i].recipe.label}</p></a>
+		 		<a class="js-result-source"><p>${result.hits[i].recipe.label}</p></a>
 		 		<!--SOURCE-->
-		 	<a class="js-result-source" href="$"{result.html_url}" target="_blank">
-		 	<p>${result.hits[i].recipe.source}</p>
+		 	<a class="js-result-source">
+		 	 <a class="js-result-name" href="${result.html_url}" target="_blank"><p>${result.hits[i].recipe.source}</p> </a>
+			
 				<h2>
 			</div>`
+// $('.js-food-item').onClick.html
+// function displayResults() {
+
+// get the ingrediandts on the page add a class to hide them by default 
+//attach a event handler to the image test it 
+//how do I acces the ingr list in the event list
+// .toggle a class
+// 9 am easter
+
+ // <a class="js-result-name" href="${result.html_url}" target="_blank">${result.name}</a>
 
 
-
+// }
+// create new content with the data of the element we are clicking on
+// google how to inject html code
+// we want to inject html code when the label is clicked
+//in order to make to code responise we have to use onClick()
    // <a class="js-result-name" href="${result.html_url}" target="_blank">${result.name}</a> 
+
+   //use documentation
+   // investigate and research 
+   // always find the best soloution. Know that there are different options always find best the best solution
+
+   // continue reading through medium
+
+   //ask how to proceed not how to solve.
+   //psedo code
+
 
 
 // ${result.hits[i].recipe.image}
 
-
+// html css javascript
 
 
 
@@ -81,6 +108,7 @@ function renderResult(result) {
 	image:"",
 	source:"",
 	url:"",
+	ingr:"",
 	}
 		}
 
@@ -96,8 +124,9 @@ function watchSubmit(){
 // watches the submit button
 $('.js-search-form').on('submit', function(event){
 	event.preventDefault();
-	getDataFromFoodApi($('.js-query-search')
-		.val(), renderResult);
+	getDataFromFoodApi($('.js-query-search').val(), renderResult);
+	//clears the search box
+	$('.js-query-search').val("");
 	});
 }
 $(watchSubmit);

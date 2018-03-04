@@ -42,7 +42,7 @@ function renderResult(result) {
 		let listItem =
 		 	`<div class ="js-food-item"> 
 		 		<img src="${result.hits[i].recipe.image}"/>
-				<a href="${result.hits[i].recipe.source}"<a/>
+				<a href="${result.hits[i].recipe.source}<a/>
 				<p>${result.hits[i].recipe.url}</p>
 				<p>${result.hits[i].recipe.label}</p>
 				<p>${result.hits[i].recipe.uri}</p>
