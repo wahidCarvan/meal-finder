@@ -41,9 +41,9 @@ body {
 }
 
 .js-map-results {
-	display: inline-block;
 	width: 70%;
 	height: 100vh;
+	display: inline-block;
 	/*background-color: grey;*/
 }
 
@@ -70,7 +70,7 @@ font-size: .9em;
 #map {
 	height: 100%;
 	width: 100%;
-	display: none;
+	/*display: none;*/
 }
 
 
@@ -86,10 +86,7 @@ font-size: .9em;
 .fail-screen {
 	display: none;
 }
-/*search again button*/
-.search-again {
-	display: none;
-}
+
 
 
 .search-screen {
@@ -101,4 +98,12 @@ font-size: .9em;
 	top: 0;
 }
 
+.js-search-results {
+	display: none;
+}
 
+
+.main-content {
+	min-height:100vh;
+	   
+}

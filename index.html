@@ -1,80 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-   <!-- Responsive viewport tag, tells small screens that it's responsive -->
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="find my next meal idea!">
-  <title>Find my next meal!</title>
-  <!-- jquery cdn mindfied -->
-     <script
-          src="https://code.jquery.com/jquery-3.2.1.min.js"
-          integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-          crossorigin="anonymous"></script>
-  <!-- Stylesheets -->
-  <link rel="stylesheet" href="float-grid.css" />
-  <link rel="stylesheet" href="index.css" />
-  <!-- google fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Vast+Shadow" rel="stylesheet">
+	<meta charset="UTF-8">
+	<!-- Responsive viewport tag, tells small screens that it's responsive -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="find my next meal idea!">
+	<title>Find my next meal!</title>
+	<!-- jquery cdn mindfied -->
+	<script
+	src="https://code.jquery.com/jquery-3.2.1.min.js"
+	integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+	crossorigin="anonymous"></script>
+	<!-- Stylesheets -->
+	<link rel="stylesheet" href="float-grid.css" />
+	<link rel="stylesheet" href="index.css" />
+	<!-- google fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Vast+Shadow" rel="stylesheet">
 </head>
-<!-- PSEDO CODE NOTES -->
-<!-- need a error page to dipslay when there is an error -->
-<!-- need a button to reload the screen -->
 <body>
-	<!-- hello world -->
-
-
 	<div class="main-content">
 		<main role="main">
-	<div class="js-start-page">
-		<!-- search form -->
-	<div class="row">
-	<div class="col-12">
-		
-		<div class="search-screen">
-			<h1>Hungry?</h1>
-			<h2> Go ahead and find Your next Meal!</h2>		
-			<form action="#" class="js-search-form">
-				<label for="query"></label>
-				<input type="text" class="js-query-search" placeholder="Find your next meal!" required>
-				<br>
-				<button class="js-submit" type="submit">Search</button>
-			</form>
-		</div>
-		</div>
-		</div>
-		 <!-- background: url(); -->
-		<!-- <div> <img src="hero-summer-salads.jpg" alt="food ingrediants"></div> -->
-		<div class="row">
-		<div class="col-6">
-			<!-- food results -->
-		<div class="js-food-results"></div>
-		</div>
-		<div class="col-6">
-		<!-- google maps -->
-		<div class="js-map-results">
-		<div id="map"></div>
-		</div>
-		</div>
-		</div>
-		 <button class="search-again">Search again</button>
-	</main>
-	<!-- <footer>&#9400; Wahid Carvan</footer> -->
+			<div class="js-start-page">
+				<!-- search form -->
+				<div class="row">
+					<div class="col-12">
+
+						<div class="search-screen">
+							<h1>Hungry?</h1>
+							<h2> Go ahead and find Your next Meal!</h2>		
+							<form action="#" class="js-search-form">
+								<label for="query"></label>
+								<input type="text" class="js-query-search" placeholder="Find your next meal!" required>
+								<br>
+								<button class="js-submit" type="submit">Search</button>
+							</form>
+						</div>
+
+
+
+					</div>
+				</div>
+				<!-- background: url(); -->
+				<!-- <div> <img src="hero-summer-salads.jpg" alt="food ingrediants"></div> -->
+				
+				
+			</div>
+			<div class="js-search-results">
+				<div class="row">
+					<div class="col-6">
+						<!-- food results -->
+						<div class="js-food-results"></div>
+					</div>
+					<div class="col-6">
+						<!-- google maps -->
+						<div class="js-map-results">
+							<div id="map"></div>
+						</div>
+					</div>
+				</div>
+				<button class="search-again">Search again</button>
+			</div>
+		</main>
+		<!-- <footer>&#9400; Wahid Carvan</footer> -->
 	</div>
 
 	<!-- add a style of display none -->
 	<div class="fail-screen">
-			<p style="display: block;"> Sorry, your search did not turn up any results!
-			</p>
-			<button class="restart">Search Again!</button>
-		</div>
-		
+		<p style="display: block;"> Sorry, your search did not turn up any results!
+		</p>
+		<button class="restart">Search Again!</button>
+	</div>
 	
+
 	<script src="placeMap.js"></script>
-	</script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCPpIUMEgvm4Hy3mQdkhAYONjNw-Kw3y7M&libraries=places&callback=initMap"
-         async defer></script>
-	<script src="food.js"></script>
-	
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCPpIUMEgvm4Hy3mQdkhAYONjNw-Kw3y7M&libraries=places&callback=initMap"
+async defer></script>
+<script src="food.js"></script>
+
 </body>
 </html>
