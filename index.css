@@ -1,13 +1,104 @@
 body {
-	
 	/*background-color: red;*/
 	text-align: center;
 	/*color: white;*/
 	font-size: 40px;
+	background-color: #ddd;
+}
+/*us red background white text */
+h1 {
+	/*font-family: 'Vast Shadow', cursive;*/
+	
+	text-align: center;
 
 }
 
+h2 {
+	/*font-family: 'Vast Shadow', cursive;*/
+	
+	text-align: center;
+
+}
+/*
+/*background image*/
+body {
+	/*border: 2px solid black;*/
+    padding: 25px;
+    background: url(hero-summer-salads.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
 .hidden {  
 	display: none;
 }
+
+.js-food-results {
+	display: inline-block;
+	width: 20%;
+
+
+}
+
+.js-map-results {
+	display: inline-block;
+	width: 70%;
+	height: 100vh;
+	/*background-color: grey;*/
+}
+
+.js-food-item {
+	/*makes every thing vertical*/
+display: flex;
+flex-direction: column;
+}
+
+.js-food-item img {
+	width: 100%;
+	height: auto;
+}
+
+.js-food-item h1 {
+font-size: .9em;
+}
+
+.js-food-item ul {
+	font-size: .4em;
+
+}
+
+#map {
+	height: 100%;
+	width: 100%;
+	display: none;
+}
+
+
+/*restart button not working*/
+.restart {
+  text-align: center;
+  font-size: 25px;
+  background-color: white;
+  color: #000BFF;
+
+}
+/*fail screen*/
+.fail-screen {
+	display: none;
+}
+/*search again button*/
+.search-again {
+	display: none;
+}
+
+
+.search-screen {
+	background-color: rgb(245,245,245);
+	text-shadow: 3px 5px #87CEFA;
+	width: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+
