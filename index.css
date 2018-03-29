@@ -92,12 +92,16 @@ font-size: .9em;
 
 
 .search-screen {
-	background-color: rgb(245,245,245);
+	/*background-color: rgb(245,245,245);*/
+	background-color: #66d9ff;
 	text-shadow: 3px 5px #87CEFA;
-	width: 100%;
-	position: absolute;
-	left: 0;
-	top: 0;
+	/*width: 100%;*/
+	/*position: absolute;*/
+	/*left: 0;
+	top: 0;*/
+	/*bottom: 300px;*/
+	border-radius: 100px;
+	margin: 200px;
 }
 
 .js-search-results {
