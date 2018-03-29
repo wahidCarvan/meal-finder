@@ -6,6 +6,9 @@
 //https://api.edamam.com/search?callback=jQuery32107494665425030487_
 // 1521670508472&_=1521670508473
 
+
+
+
 const EDAMAM_SEARCH_URL = 'https://api.edamam.com/search'
 const EDAMAM_API_KEY =
 '8a8331400d84d570a5aa12258b227c04'	
@@ -94,8 +97,10 @@ function getDataFromBothApi(searchTerm) {
  })
 
 }
+
 // make a function to render the results
 function renderResult(result) {
+  $('body').removeClass('background-image');
 	//hides the start page after the results are rendered
 	$('.js-start-page').addClass("hidden");
 	//grab the results div and display the result in html format
