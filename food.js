@@ -13,25 +13,25 @@ const EDAMAM_APPLICATION_ID = '8b5edbbf'
 //
 function jsonpCallback(json) {
 
-	 if(json.hits.length > 0) {
-		renderResult(json);
-   
-	 } 
-   else {
+  if(json.hits.length > 0) {
+    renderResult(json);
+
+  } 
+  else {
     showFailScreen();
-	 
-	 }
+
+  }
 }
 
 function showFailScreen() {
-    $('.fail-screen').show();
-    $('.main-content').hide();
-    $('.fail-screen').on('click', '.restart', function (event) {
+  $('.fail-screen').show();
+  $('.main-content').hide();
+  $('.fail-screen').on('click', '.restart', function (event) {
       //location.reload()
       console.log(location);
-    location.reload();
-  });
-  };
+      location.reload();
+    });
+};
 // $( "p" ).text( "<b>Some</b> new text." );
 
 
@@ -42,75 +42,47 @@ function showFailScreen() {
 // getDataFromFoodApi takes 2 arguments search term and the callback 
 //a callback is a function is executed after another one is called.
 function placesCallback(results, status){
-   if(status != 'OK') {
-     return showFailScreen();
-   }  
-      const markers = results.map(function(result){
+ if(status != 'OK') {
+   return showFailScreen();
+ }  
+ const markers = results.map(function(result){
 
-      	return {
-              map: window.map,
-              title: result.name,
-              position: result.geometry.location
-            }
+   return {
+    map: window.map,
+    title: result.name,
+    position: result.geometry.location
+  }
 
-      });
-      markers.forEach(function(marker){
-      	new google.maps.Marker(marker)
-      })
-  console.log(markers);
-
-
-
-      //     // For each place, get the icon, name and location.
-      //     let bounds = new google.maps.LatLngBounds();
-      //     places.forEach(function(place) {
-      //       if (!place.geometry) {
-      //         console.log("Returned place contains no geometry");
-      //         return;
-      //       }
-
-      //       // Create a marker for each place.
-              // markers.push(new google.maps.Marker({
-            //   map: map,
-            //   icon: icon,
-            //   title: place.name,
-            //   position: place.geometry.location
-            // }));
-
-      //       if (place.geometry.viewport) {
-      //         // Only geocodes have viewport.
-      //         bounds.union(place.geometry.viewport);
-      //       } else {
-      //         bounds.extend(place.geometry.location);
-      //       }
-      //     });
-      //     map.fitBounds(bounds);
-      //   // });
-      // }
-}
-function getDataFromBothApi(searchTerm) {
-  	   navigator.geolocation.getCurrentPosition(function(position){
+});
+ markers.forEach(function(marker){
+   new google.maps.Marker(marker)
+ })
+ console.log(markers);
+    }
+    
+    function getDataFromBothApi(searchTerm) {
+      navigator.geolocation.getCurrentPosition(function(position){
         console.log('gotten current position', new Date())
 
-  	   	console.log(position); 
-  	   	  let service = new google.maps.places.PlacesService(map);
-          service.nearbySearch({
+        console.log(position); 
+        let service = new google.maps.places.PlacesService(map);
+        service.nearbySearch({
           location: {lat: position.coords.latitude, lng: position.coords.longitude},
           keyword:  searchTerm,
           radius: 500,
           type: ['restaurant']
         }, placesCallback);
-  	   		}, function (error){
-  	   			 console.log(error);
-  	   			});
+      }, function (error){
+        console.log(error);
+      });
 
-  $.ajax({
+      $.ajax({
 
-  	url: 'https://api.edamam.com/search?callback=jsonpCallback&ingr=10&app_id=8b5edbbf&app_key=8a8331400d84d570a5aa12258b227c04&q='+searchTerm,
-  	dataType:'jsonp'
-  })
+       url: 'https://api.edamam.com/search?callback=jsonpCallback&ingr=10&app_id=8b5edbbf&app_key=8a8331400d84d570a5aa12258b227c04&q='+searchTerm,
+       dataType:'jsonp'
+     })
 
-}
+    }
 // make a function to render the results
 function renderResult(result) {
 	//hides the start page after the results are rendered
@@ -128,17 +100,17 @@ function renderResult(result) {
 		});
 		// left align the ul to remove the white space
 	// display the results to the page
-		let listItem =
-		 	`<div class ="js-food-item"> 
-		 	<!--IMAGE -->
-			 	<img src="${result.hits[i].recipe.image}"/>
-			<!--ingr-->
-		 		<h1>${result.hits[i].recipe.label}</h1>
-		 			<!--.join("") removes the commas since we are working with an array -->
-		 		<ul>${recipes.join("")}</ul>
-		 		<!--SOURCE-->
-		 	<a href="${result.hits[i].recipe.url}" target="_blank">recipe</a>
-			</div>`
+  let listItem =
+  `<div class ="js-food-item"> 
+  <!--IMAGE -->
+  <img src="${result.hits[i].recipe.image}"/>
+  <!--ingr-->
+  <h1>${result.hits[i].recipe.label}</h1>
+  <!--.join("") removes the commas since we are working with an array -->
+  <ul>${recipes.join("")}</ul>
+  <!--SOURCE-->
+  <a href="${result.hits[i].recipe.url}" target="_blank">recipe</a>
+  </div>`
 
 	// grab the listItems and push in to the listItem
 		// console.log(listItems);
@@ -149,14 +121,14 @@ function renderResult(result) {
 	// result.hits[i].uri
 	// we make a object to store the data
 	let recipe = {
-	uri: "",
-	label: "",
-	image:"",
-	source:"",
-	url:"",
-	ingr:"",
-	}
-		}
+   uri: "",
+   label: "",
+   image:"",
+   source:"",
+   url:"",
+   ingr:"",
+ }
+}
 
 $('.js-food-results').html
 (listItems.join(''));
@@ -179,11 +151,11 @@ $('.js-search-form').on('submit', function(event){
 
   });
   $('.js-search-results').show();
-	});
+});
 }
 $(watchSubmit);
 
- 
+
 
 
 
