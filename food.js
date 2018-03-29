@@ -51,6 +51,7 @@ function jsonpCallback(json) {
 }
 
 function showFailScreen() {
+  $('body').removeClass('background-image');
   $('.fail-screen').show();
   $('.main-content').hide();
   $('.fail-screen').on('click', '.restart', function (event) {
