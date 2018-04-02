@@ -28,56 +28,59 @@
 						<div class="search-screen">
 							<h1>Hungry?</h1>
 							<!-- <h2>Don't know if you want to cook or go out to eat?</h2>
-							<h2>Use the search box below, search for what you would like to eat.</h2>	 -->	
-							<form action="#" class="js-search-form">
-								<label for="query"></label>
-								<input type="text" class="js-query-search" placeholder="Search for food" required>
-								<br>
-								<button class="js-submit" type="submit"><h2>Hunger Be Gone</h2></button>
-							</form>
-						</div>
+								<h2>Use the search box below, search for what you would like to eat.</h2>	 -->	
+								<form action="#" class="js-search-form">
+									<label for="query"></label>
+									<input type="text" class="js-query-search" placeholder="Search for food" required>
+									<br>
+									<button class="js-submit" type="submit"><h2>Hunger Be Gone</h2></button>
+								</form>
+							</div>
 
 
 
-					</div>
-				</div>
-				<!-- background: url(); -->
-				<!-- <div> <img src="hero-summer-salads.jpg" alt="food ingrediants"></div> -->
-				
-				
-			</div>
-			<div class="js-search-results">
-				<div class="row">
-					<div class="col-6">
-						<!-- food results -->
-						<div class="js-food-results"></div>
-					</div>
-					<div class="col-6">
-						<!-- google maps -->
-						<div class="js-map-results">
-							<div id="map"></div>
 						</div>
 					</div>
+					<!-- background: url(); -->
+					<!-- <div> <img src="hero-summer-salads.jpg" alt="food ingrediants"></div> -->
+					
+					
 				</div>
-				<button class="search-again">Search again</button>
-			</div>
-		</main>
-		<!-- <footer>&#9400; Wahid Carvan</footer> -->
-	</div>
+				<div class="js-search-results">
+					<div class="row">
+						
+						<div class="col-12">
+							<!-- google maps -->
+							<div class="js-map-results">
+								<div id="map"></div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-12">
+							<!-- food results -->
+							<div class="js-food-results"></div>
+						</div>
+					</div>
+					<button class="search-again">Search again</button>
+				</div>
+			</main>
+			<!-- <footer>&#9400; Wahid Carvan</footer> -->
+		</div>
 
-	<!-- add a style of display none -->
-	<div class="fail-screen">
-		<p style="display: block;"> Sorry, your search did not turn up any results!
-		</p>
-		<button class="restart">Search Again!</button>
-	</div>
-	
+		<!-- add a style of display none -->
+		<div class="fail-screen">
+			<p style="display: block;"> Sorry, your search did not turn up any results!
+			</p>
+			<button class="restart">Search Again!</button>
+		</div>
+		
 
-	<script src="placeMap.js"></script>
-</script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCPpIUMEgvm4Hy3mQdkhAYONjNw-Kw3y7M&libraries=places&callback=initMap"
-async defer></script>
-<script src="food.js"></script>
+		<script src="placeMap.js"></script>
+	</script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCPpIUMEgvm4Hy3mQdkhAYONjNw-Kw3y7M&libraries=places&callback=initMap"
+	async defer></script>
+	<script src="food.js"></script>
 
 </body>
 </html>
