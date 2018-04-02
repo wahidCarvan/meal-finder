@@ -26,60 +26,74 @@
 					<div class="col-12">
 
 						<div class="search-screen">
-							<h1>Hungry?</h1>
-									
-								<form action="#" class="js-search-form">
-									<label for="query"></label>
-									<input type="text" class="js-query-search" placeholder="Search for food" required>
-									<br>
-									<button class="js-submit" type="submit">Hunger Be Gone</</button>
-								</form>
+							<button id="myBtn">Click me to get started!</button>
+
+							<!-- The Modal -->
+							<div id="myModal" class="modal">
+								<!-- Modal content -->
+								<div class="modal-content">
+									<span class="close">&times;</span>
+									<p>Use the search box below, and search for any food item your in a mood for. </p>
+									<p>The search will return 2 options for you, the first will be local restaurants that serve that meal, and the second is the required time, and ingrediants to make that meal.</p>
+									<p>Choice is yours, either way have some fun with the app</p>
+								</div>
+
 							</div>
+							<h2>Don't stay hungry my friends.</h2>
 
+							<form action="#" class="js-search-form">
+								<label for="query"></label>
+								<input type="text" class="js-query-search" placeholder="Search for food" required>
+								<br>
+								<button class="js-submit" type="submit">Hunger Be Gone</</button>
 
-
+							</form>
 						</div>
+
+
+
 					</div>
-					<!-- background: url(); -->
-					<!-- <div> <img src="hero-summer-salads.jpg" alt="food ingrediants"></div> -->
-
-
 				</div>
-				<div class="js-search-results">
-					<div class="row">
+				<!-- background: url(); -->
+				<!-- <div> <img src="hero-summer-salads.jpg" alt="food ingrediants"></div> -->
 
-						<div class="col-12">
-							<!-- google maps -->
-							<div class="js-map-results">
-								<div id="map"></div>
-							</div>
+
+			</div>
+			<div class="js-search-results">
+				<div class="row">
+
+					<div class="col-12">
+						<!-- google maps -->
+						<div class="js-map-results">
+							<div id="map"></div>
 						</div>
 					</div>
-					<div class="row">
-						<div class="col-12">
-							<!-- food results -->
-							<div class="js-food-results"></div>
-						</div>
-					</div>
-					<button class="search-again">Search again</button>
 				</div>
-			</main>
-			<!-- <footer>&#9400; Wahid Carvan</footer> -->
-		</div>
+				<div class="row">
+					<div class="col-12">
+						<!-- food results -->
+						<div class="js-food-results"></div>
+					</div>
+				</div>
+				<button class="search-again">Search again</button>
+			</div>
+		</main>
+		<!-- <footer>&#9400; Wahid Carvan</footer> -->
+	</div>
 
-		<!-- add a style of display none -->
-		<div class="fail-screen">
-			<p style="display: block;"> Sorry, your search did not turn up any results!
-			</p>
-			<button class="restart">Search Again!</button>
-		</div>
+	<!-- add a style of display none -->
+	<div class="fail-screen">
+		<p style="display: block;"> Sorry, your search did not turn up any results!
+		</p>
+		<button class="restart">Search Again!</button>
+	</div>
 
 
-		<script src="placeMap.js"></script>
-	</script>
-	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCPpIUMEgvm4Hy3mQdkhAYONjNw-Kw3y7M&libraries=places&callback=initMap"
-	async defer></script>
-	<script src="food.js"></script>
+	<script src="placeMap.js"></script>
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCPpIUMEgvm4Hy3mQdkhAYONjNw-Kw3y7M&libraries=places&callback=initMap"
+async defer></script>
+<script src="food.js"></script>
 
 </body>
 </html>

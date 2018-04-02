@@ -1,3 +1,11 @@
+
+
+
+
+
+
+
+
 body {
 	/*background-color: red;*/
 	text-align: center;
@@ -5,17 +13,53 @@ body {
 	font-size: 40px;
 	background-color: #ddd;
 }
-/*us red background white text */
+
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+/* The Close Button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
 h1 {
-	/*font-family: 'Vast Shadow', cursive;*/
 	
 	text-align: center;
-
 }
 
 h2 {
 	text-align: center;
-
 }
 
 /*class background-image*/
@@ -159,5 +203,25 @@ body {
     	font-weight: bold;
     	/*text-shadow: 1px 1px 2px black;*/
     }
+/*search box*/
+
+input[type=text] {
+    width: 230px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    background-image: url('searchicon.png');
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+input[type=text]:focus {
+    width: 100%;
+}
 
 
