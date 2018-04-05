@@ -4,6 +4,7 @@ body {
 	/*color: white;*/
 	font-size: 40px;
 	/*background-color: #ddd;*/
+	padding: 0;
 }
 
 
@@ -24,12 +25,12 @@ body {
 
 /* Modal Content */
 .modal-content {
-    background-color: #fefefe;
+    background-color: #7cacf9;
     margin: auto;
     padding: 20px;
     border: 1px solid #888;
     width: 80%;
-    color: red;
+    color: white;
 }
 
 /* The Close Button */
@@ -82,8 +83,7 @@ h2 {
 }
 
 body {
-	/*border: 2px solid black;*/
-	padding: 25px;
+	padding: 0;
 }
 
 .hidden {  
@@ -135,26 +135,25 @@ body {
 
 
 /*restart button not working*/
-.restart {
+/*.restart {
 	text-align: center;
 	font-size: 25px;
 	background-color: white;
-	color: #000BFF;
 
-}
+}*/
 /*fail screen*/
 .fail-screen {
 	display: none;
 }
 
 .search-screen {
-	/*background-color: rgb(245,245,245);*/
 	background-color: #2bb673;
-	/*text-shadow: 3px 5px black;*/
 	color: white;
-	border-radius: 100px;
-	margin: 200px;
+	border-radius: 10px;
+	/*t r b l*/
+	margin: 0 100px 0 100px;
 	font-weight: 900;
+	padding: 1em 0;
 }
 
 .js-search-results {
@@ -192,7 +191,9 @@ body {
 
     }*/
     /*submit button*/
-    .js-submit {
+    /*.js-submit*/
+
+     button {
     	margin-top: 20px;
     	margin-bottom: 20px;
     	padding-left: 10px;
@@ -210,6 +211,7 @@ body {
     }
 
     button:hover {
+    	border-color: #2bb673;
     	background-color: white;
     	color: #2bb673;
     	font-weight: bold;
@@ -224,7 +226,7 @@ input[type=text] {
     border-radius: 4px;
     font-size: 16px;
     background-color: white;
-    background-image: url('searchicon.png');
+    /*background-image: url('searchicon.png');*/
     background-position: 10px 10px; 
     background-repeat: no-repeat;
     padding: 12px 20px 12px 40px;
@@ -235,5 +237,62 @@ input[type=text] {
 input[type=text]:focus {
     width: 100%;
 }
+
+
+/*Mobile Friendly*/
+@media only screen and (max-width: 1000px) { 
+
+	.search-screen {
+		margin: 100px;
+
+}
+.search-screen h2 {
+	font-size: 1em;
+
+ }
+
+}
+
+@media only screen and (max-width: 600px) { 
+
+	.search-screen {
+		margin: 0;
+}
+
+.search-screen h2 {
+	font-size: 0.7em;
+	
+ }
+
+ }
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
