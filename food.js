@@ -144,7 +144,8 @@ function renderResult(result) {
   <!--.join("") removes the commas since we are working with an array -->
   <ul>${recipes.join("")}</ul>
   <!--SOURCE-->
-  <a href="${result.hits[i].recipe.url}" target="_blank">Learn more about the recipe</a>
+
+  <a class=recipes href="${result.hits[i].recipe.url}" target="_blank">Learn more about the recipe</a>
   </div>`
 
 	// grab the listItems and push in to the listItem

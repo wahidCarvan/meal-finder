@@ -31,13 +31,14 @@ body {
     border: 1px solid #888;
     width: 80%;
     color: white;
+      font-size: 20px;
 }
 
 /* The Close Button */
 .close {
     color: #aaaaaa;
     float: right;
-    font-size: 28px;
+    font-size: 20px;
     font-weight: bold;
 }
 
@@ -72,6 +73,7 @@ h1 {
 
 h2 {
 	text-align: center;
+	padding-top: 20px;
 }
 
 /*class background-image*/
@@ -127,6 +129,18 @@ body {
 
 }
 
+
+.recipes {
+	color: #2bb673;
+
+}
+.recipes:hover {
+	color:red;
+}
+
+
+
+
 #map {
 	height: 100%;
 	width: 100%;
@@ -151,9 +165,9 @@ body {
 	color: white;
 	border-radius: 10px;
 	/*t r b l*/
-	margin: 0 100px 0 100px;
+	margin: 0 300px;
 	font-weight: 900;
-	padding: 1em 0;
+	/*padding: 1em 0;*/
 }
 
 .js-search-results {
@@ -248,6 +262,7 @@ input[type=text]:focus {
 }
 .search-screen h2 {
 	font-size: 1em;
+
 
  }
 
