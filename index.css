@@ -7,6 +7,10 @@ body {
 	padding: 0;
 }
 
+.result-title {
+	border: 2px solid green;
+	color: blue;
+}
 
 /* The Modal (background) */
 .modal {
@@ -69,6 +73,7 @@ body {
 h1 {
 	
 	text-align: center;
+	
 }
 
 h2 {

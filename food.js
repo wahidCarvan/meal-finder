@@ -135,16 +135,17 @@ function renderResult(result) {
 		});
 		// left align the ul to remove the white space
 	// display the results to the page
+   // 
   let listItem =
   `<div class ="js-food-item"> 
   <!--IMAGE -->
-  <div style="background-image: url(${result.hits[i].recipe.image}); background-size:cover; height: 200px; width: 100%;"> </div>
+ <div style="background-image: url(${result.hits[i].recipe.image}); background-size:cover; height: 500px; width: 500px; background-repeat: no-repeat"> </div> 
+  
   <!--ingr-->
   <h1>${result.hits[i].recipe.label}</h1>
   <!--.join("") removes the commas since we are working with an array -->
   <ul>${recipes.join("")}</ul>
   <!--SOURCE-->
-
   <a class=recipes href="${result.hits[i].recipe.url}" target="_blank">Learn more about the recipe</a>
   </div>`
 
