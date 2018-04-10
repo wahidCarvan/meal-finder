@@ -12,22 +12,22 @@ function jsonpCallback(json) {
  } 
  else {
   showFailScreen();
-  }
+}
 }
 function showFailScreen() {
   $('body').removeClass('background-image');
   $('.fail-screen').show();
   $('.main-content').hide();
   $('.fail-screen').on('click', '.restart', function (event) {
-      console.log(location);
-      location.reload();
-    });
+    console.log(location);
+    location.reload();
+  });
 };
 function placesCallback(results, status){
  if(status != 'OK') {
    return showFailScreen();
  }  
-const markers = results.map(function(result){
+ const markers = results.map(function(result){
   console.log(result);
   let infowindow = new google.maps.InfoWindow({
     content: `<div>
@@ -57,8 +57,8 @@ $.ajax({
 })
 // makes the call google places
 navigator.geolocation.getCurrentPosition(function(position){
-    console.log(position); 
-    let map = new google.maps.Map(document.getElementById('map'), {
+  console.log(position); 
+  let map = new google.maps.Map(document.getElementById('map'), {
       // lat and long updated to get users position
       center: {lat: position.coords.latitude, lng: position.coords.longitude},
       zoom: 15,
@@ -67,17 +67,17 @@ navigator.geolocation.getCurrentPosition(function(position){
         position: google.maps.ControlPosition.LEFT_CENTER
       },
     });
-    window.map = map;
-    let service = new google.maps.places.PlacesService(map);
-    service.nearbySearch({
-      location: {lat: position.coords.latitude, lng: position.coords.longitude},
-      keyword:  finalSearchTerm,
-      radius: 500,
-      type: ['restaurant']
-    }, placesCallback);
-  }, function (error){
-    console.log(error);
-  });
+  window.map = map;
+  let service = new google.maps.places.PlacesService(map);
+  service.nearbySearch({
+    location: {lat: position.coords.latitude, lng: position.coords.longitude},
+    keyword:  finalSearchTerm,
+    radius: 500,
+    type: ['restaurant']
+  }, placesCallback);
+}, function (error){
+  console.log(error);
+});
 }
 // make a function to render the results
 function renderResult(result) {
@@ -107,7 +107,7 @@ function renderResult(result) {
    <a class=recipes href="${result.hits[i].recipe.url}" target="_blank">Learn more about the recipe</a>
    </div>`
 	// grab the listItems and push in to the listItem
-		listItems.push(listItem);
+  listItems.push(listItem);
 // push the listItem to listItems array
 	// result.hits[i].uri
 	// we make a object to store the data
@@ -118,7 +118,7 @@ function renderResult(result) {
    source:"",
    url:"",
    ingr:"",
-  }
+ }
 }
 $('.js-food-results').html
 (listItems.join(''));
