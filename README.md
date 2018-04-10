@@ -1,4 +1,4 @@
-# Book-Thing.IO
+# meal-finder
 
 A application built for food lovers. Users can search for their next meal and decide if they would like to go out to eat or just make the meal at home. A user would search for their next meal and see what ingredients and prep work is involved. After, the results return the user can decide if they want to make it at home or just go to a local restaurant.
 
