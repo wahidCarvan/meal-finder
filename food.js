@@ -56,24 +56,24 @@ function placesCallback(results, status){
 //second expression
 // add the css inline for this part
 const markers = results.map(function(result){
-console.log(result);
- let infowindow = new google.maps.InfoWindow({
-  content: `<div>
-<h1>${result.name}</h1>
-<p>${result.vicinity}</p>
-<p>${result.opening_hours.open_now?'open now':'closed'}</p>
-<p>Rating:${result.rating}</p>
-  </div>`
-});
- const marker = new google.maps.Marker ({
-  map: window.map,
-  title: result.name,
-  position: result.geometry.location,
-})
- marker.addListener('click', function() {
-  infowindow.open(map, marker);
-})
-return marker;
+  console.log(result);
+  let infowindow = new google.maps.InfoWindow({
+    content: `<div>
+    <h1>${result.name}</h1>
+    <p>${result.vicinity}</p>
+    <p>${result.opening_hours.open_now?'open now':'closed'}</p>
+    <p>Rating:${result.rating}</p>
+    </div>`
+  });
+  const marker = new google.maps.Marker ({
+    map: window.map,
+    title: result.name,
+    position: result.geometry.location,
+  })
+  marker.addListener('click', function() {
+    infowindow.open(map, marker);
+  })
+  return marker;
 });
 // markers.forEach(function(marker){
 //  new google.maps.Marker(marker)
@@ -136,18 +136,18 @@ function renderResult(result) {
 		// left align the ul to remove the white space
 	// display the results to the page
    // 
-  let listItem =
-  `<div class ="js-food-item"> 
-  <!--IMAGE -->
- <div style="background-image: url(${result.hits[i].recipe.image}); background-size:cover; height: 500px; width: 500px; background-repeat: no-repeat"> </div> 
-  
-  <!--ingr-->
-  <h1>${result.hits[i].recipe.label}</h1>
-  <!--.join("") removes the commas since we are working with an array -->
-  <ul>${recipes.join("")}</ul>
-  <!--SOURCE-->
-  <a class=recipes href="${result.hits[i].recipe.url}" target="_blank">Learn more about the recipe</a>
-  </div>`
+   let listItem =
+   `<div class ="js-food-item"> 
+   <!--IMAGE -->
+   <div style="background-image: url(${result.hits[i].recipe.image}); background-size:cover; height: 500px; width: 500px; background-repeat: no-repeat"> </div> 
+   
+   <!--ingr-->
+   <h1>${result.hits[i].recipe.label}</h1>
+   <!--.join("") removes the commas since we are working with an array -->
+   <ul>${recipes.join("")}</ul>
+   <!--SOURCE-->
+   <a class=recipes href="${result.hits[i].recipe.url}" target="_blank">Learn more about the recipe</a>
+   </div>`
 
 	// grab the listItems and push in to the listItem
 		// console.log(listItems);
