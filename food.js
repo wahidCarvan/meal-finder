@@ -1,14 +1,5 @@
-// food api starts
 'use strict';
-//variables decalred in the global scope should be ALL CAPS
-// search path
-//Path: https://api.edamam.com/search
-//https://api.edamam.com/search?callback=jQuery32107494665425030487_
-// 1521670508472&_=1521670508473
-
-
-
-
+// food api start
 const EDAMAM_SEARCH_URL = 'https://api.edamam.com/search'
 const EDAMAM_API_KEY =
 '8a8331400d84d570a5aa12258b227c04'	
@@ -17,44 +8,25 @@ let finalSearchTerm = '';
 function jsonpCallback(json) {
 
   if(json.hits.length > 0) {
-
    renderResult(json);
-
  } 
  else {
   showFailScreen();
-
+  }
 }
-}
-
 function showFailScreen() {
   $('body').removeClass('background-image');
   $('.fail-screen').show();
   $('.main-content').hide();
   $('.fail-screen').on('click', '.restart', function (event) {
-      //location.reload()
       console.log(location);
       location.reload();
     });
 };
-// $( "p" ).text( "<b>Some</b> new text." );
-
-
-// hide the error page
-//.show() .hide()
-//a button needed is needed to go back to the main page
-//
-// getDataFromFoodApi takes 2 arguments search term and the callback 
-//a callback is a function is executed after another one is called.
 function placesCallback(results, status){
  if(status != 'OK') {
    return showFailScreen();
  }  
-//ternary operator
-//3 parts boolean
-//first expression
-//second expression
-// add the css inline for this part
 const markers = results.map(function(result){
   console.log(result);
   let infowindow = new google.maps.InfoWindow({
@@ -75,12 +47,7 @@ const markers = results.map(function(result){
   })
   return marker;
 });
-// markers.forEach(function(marker){
-//  new google.maps.Marker(marker)
-// })
-console.log(markers);
 }
-
 function getDataFromBothApi(searchTerm) {
  finalSearchTerm = searchTerm;
 // makes the call to edamam
@@ -88,11 +55,8 @@ $.ajax({
  url: 'https://api.edamam.com/search?callback=jsonpCallback&ingr=10&app_id=8b5edbbf&app_key=8a8331400d84d570a5aa12258b227c04&q='+searchTerm,
  dataType:'jsonp'
 })
-
 // makes the call google places
 navigator.geolocation.getCurrentPosition(function(position){
-    // console.log('gotten current position', new Date())
-
     console.log(position); 
     let map = new google.maps.Map(document.getElementById('map'), {
       // lat and long updated to get users position
@@ -114,9 +78,7 @@ navigator.geolocation.getCurrentPosition(function(position){
   }, function (error){
     console.log(error);
   });
-
 }
-
 // make a function to render the results
 function renderResult(result) {
   $('body').removeClass('background-image');
@@ -133,14 +95,10 @@ function renderResult(result) {
 		let recipes = result.hits[i].recipe.ingredients.map(function(ingredient){
 			return `<li>${ingredient.text}</li>`;
 		});
-		// left align the ul to remove the white space
-	// display the results to the page
-   // 
    let listItem =
    `<div class ="js-food-item"> 
    <!--IMAGE -->
    <div style="background-image: url(${result.hits[i].recipe.image}); background-size:cover; height: 500px; width: 500px; background-repeat: no-repeat"> </div> 
-   
    <!--ingr-->
    <h1>${result.hits[i].recipe.label}</h1>
    <!--.join("") removes the commas since we are working with an array -->
@@ -148,12 +106,8 @@ function renderResult(result) {
    <!--SOURCE-->
    <a class=recipes href="${result.hits[i].recipe.url}" target="_blank">Learn more about the recipe</a>
    </div>`
-
 	// grab the listItems and push in to the listItem
-		// console.log(listItems);
 		listItems.push(listItem);
-		// console.log(listItems);
-
 // push the listItem to listItems array
 	// result.hits[i].uri
 	// we make a object to store the data
@@ -164,17 +118,12 @@ function renderResult(result) {
    source:"",
    url:"",
    ingr:"",
- }
+  }
 }
-
 $('.js-food-results').html
 (listItems.join(''));
 console.log(result);
 };
-// function resultsRendered(){
-// 	$('.js-start-page').addClass("hidden");
-// };
-
 function watchSubmit(){
 // watches the submit button
 $('.js-search-form').on('submit', function(event){
@@ -185,14 +134,8 @@ $('.js-search-form').on('submit', function(event){
   //calling reloadPage
   $('.main-content').on('click', '.search-again', function (event) {
     location.reload();
-
   });
   $('.js-search-results').show();
 });
 }
 $(watchSubmit);
-
-
-
-
-
