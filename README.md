@@ -17,7 +17,7 @@ Start Page:
 =======
 Maps Result Page:
 
-![Maps Result Page](mapResults.png)
+![Maps Result Page](mapsResults.png)
 
 Recipe Results:
 
