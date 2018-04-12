@@ -11,11 +11,14 @@ I love trying new food items, sometimes it is easier to make it at home while ot
 ## Screenshots
 Start Page
 
-![Start Page]:(startpage.png)
+![Start Page](startpage.png)
 
-![Maps Result Page]:(mapResults.png)
+Maps Result Page
 
-![Recipes Result Page]:(recipeResults.png)
+![Maps Result Page](mapResults.png)
+
+Recipe Results
+![Recipes Result Page](recipeResults.png)
 
 
 ## Built With
