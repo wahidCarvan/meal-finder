@@ -9,15 +9,15 @@ I love trying new food items, sometimes it is easier to make it at home while ot
 
 
 ## Screenshots
-Start Page
-
+Start Page:
 ![Start Page](startpage.png)
 
-Maps Result Page
+Maps Result Page:
 
-![Maps Result Page](mapResults.png)
+![Maps Result Page](mapsResults.png)
 
-Recipe Results
+Recipe Results:
+
 ![Recipes Result Page](recipeResults.png)
 
 
