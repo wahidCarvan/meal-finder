@@ -10,10 +10,8 @@ I love trying new food items, sometimes it is easier to make it at home while ot
 
 ## Screenshots
 Start Page:
-![Start Page](startpage.png)
-
-<<<<<<< HEAD
-![Start Page]:(startPage.png)
+![Start Page](startPage.png)
+)
 
 ![Maps Result Page]:(mapsResults.png)
 ![Recipes Result Page]:(recipeResults.png)
