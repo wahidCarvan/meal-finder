@@ -26,7 +26,8 @@ function showFailScreen() {
 function placesCallback(results, status){
  if(status != 'OK') {
    return showFailScreen();
- }  
+ } 
+ $('.result-title').show() 
  const markers = results.map(function(result){
   console.log(result);
   let infowindow = new google.maps.InfoWindow({
@@ -69,14 +70,17 @@ navigator.geolocation.getCurrentPosition(function(position){
     });
   window.map = map;
   let service = new google.maps.places.PlacesService(map);
+
   service.nearbySearch({
     location: {lat: position.coords.latitude, lng: position.coords.longitude},
     keyword:  finalSearchTerm,
     radius: 500,
     type: ['restaurant']
   }, placesCallback);
+
 }, function (error){
   console.log(error);
+
 });
 }
 // make a function to render the results
@@ -98,7 +102,7 @@ function renderResult(result) {
    let listItem =
    `<div class ="js-food-item"> 
    <!--IMAGE -->
-   <div style="background-image: url(${result.hits[i].recipe.image}); background-size:cover; height: 500px; width: 500px; background-repeat: no-repeat"> </div> 
+   <div style="background-image: url(${result.hits[i].recipe.image}); background-size:cover; background-position: center; height: 500px; width: 100%; background-repeat: no-repeat"> </div> 
    <!--ingr-->
    <h1>${result.hits[i].recipe.label}</h1>
    <!--.join("") removes the commas since we are working with an array -->
@@ -135,7 +139,8 @@ $('.js-search-form').on('submit', function(event){
   $('.main-content').on('click', '.search-again', function (event) {
     location.reload();
   });
-  $('.js-search-results').show();
+   $('.js-search-results').show();
+
 });
 }
 $(watchSubmit);

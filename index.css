@@ -10,6 +10,7 @@ body {
 .result-title {
 	border: 2px solid green;
 	color: blue;
+	display: none;
 }
 
 /* The Modal (background) */
