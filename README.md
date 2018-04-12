@@ -14,6 +14,7 @@ Start Page
 ![Start Page]:(startpage.png)
 
 ![Maps Result Page]:(mapResults.png)
+
 ![Recipes Result Page]:(recipeResults.png)
 
 
@@ -38,4 +39,4 @@ Start Page
 
 ## Authors
 
-* ** Wahid Carvan
+Wahid Carvan
